@@ -10,6 +10,7 @@
     <PlatformSpecificBuild>true</PlatformSpecificBuild>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <Platforms>AnyCPU;x86;x64</Platforms>
   </PropertyGroup>
   <PropertyGroup>
     <IsPackable Condition="'$(TargetArchitecture)' == 'x86'">true</IsPackable>
@@ -35,7 +36,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Build.Tasks.Core" Version="$(MicrosoftBuildTasksCoreVersion)" />
+    <PackageReference Include="Microsoft.Build.Tasks.Core" Version="17.0.0" />
   </ItemGroup>
   <ItemGroup Condition="!$(TargetFramework.StartsWith('net4'))">
     <PackageReference Include="System.Security.Cryptography.Cng" Version="4.7.0" />
